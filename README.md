@@ -68,12 +68,10 @@ This project demonstrates the integration of speech recognition, natural languag
     - SSH access or monitor + keyboard setup
     - Internet connection for package installations
     - A verified OpenAI API key
-    > Optional: Android device with the mobile app (for remote control)
-    > Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
+    - Android device with the mobile app (for remote control)
 
 2) Hardware Connections
-Connect the following modules to the Raspberry Pi as per your wiring plan:
-
+- Connect the following modules to the Raspberry Pi as per your wiring plan:
     - L298N Motor Driver: Connect ENA, ENB, IN1–IN4 to GPIO pins (e.g., 12, 13, 17, 18, 22, 23)
     - HC-SR04 Ultrasonic Sensor: Connect Trig and Echo to GPIO (e.g., GPIO5, GPIO6)
     - MPU-6050 Gyroscope: Connect to I2C pins (SDA = GPIO2, SCL = GPIO3)
@@ -114,15 +112,15 @@ Connect the following modules to the Raspberry Pi as per your wiring plan:
 
 4) Folder Structure
     - capstoneproject-automind-grup-14/
-    -> mic_test.py                # Microphone test script
-    -> speech_to_text.py          # Whisper-based voice transcription
-    -> motor_surucu.py            # Motor control logic
-    -> openai_tts.py              # Voice feedback generation using TTS
-    -> server.py                  # Flask backend server
-    -> kayit_al.py                # Live audio recording script
-    -> canli_kayit_ve_tanima.py   # Live speaker verification
-    -> authorized_uids.txt        # RFID authentication list
-    -> requirements.txt           # Dependency list
+    <mic_test.py                # Microphone test script
+    <speech_to_text.py          # Whisper-based voice transcription
+    <motor_surucu.py            # Motor control logic
+    <openai_tts.py              # Voice feedback generation using TTS
+    <server.py                  # Flask backend server
+    <kayit_al.py                # Live audio recording script
+    <canli_kayit_ve_tanima.py   # Live speaker verification
+    <authorized_uids.txt        # RFID authentication list
+    <requirements.txt           # Dependency list
 
 5) Running the Project
     1. Start the Flask server on Raspberry Pi:
@@ -150,14 +148,6 @@ Whisper API is used online, so stable internet is required.
 Output logs are written to server_log.txt.
 
 Animations and vehicle status are reflected in the Flutter-based mobile app.
-
-
-
-```bash
-# Example commands
-git clone https://github.com/username/project-name.git
-cd project-name
-```
 
 ## Usage
 Provide instructions and examples on how to use the project. Include code snippets or screenshots where applicable.

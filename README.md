@@ -62,7 +62,6 @@ This project demonstrates the integration of speech recognition, natural languag
     - Speaker Verification: Ensures only known users can give commands using embedding-based audio comparison.
 
 ## Installation
-
 1) Prerequisites
     - Raspberry Pi 5 (with internet access)
     - Raspberry Pi OS (Bookworm 64-bit) installed and bootable on a microSD card
@@ -86,7 +85,8 @@ Connect the following modules to the Raspberry Pi as per your wiring plan:
 3) Software Setup
     1. Update System & Install Git
         ```bash
-        sudo apt update && sudo apt upgrade -y
+        sudo apt update
+        sudo apt upgrade -y
         sudo apt install git python3-pip python3-venv -y
         ```
     2. Clone the Repository
@@ -103,8 +103,7 @@ Connect the following modules to the Raspberry Pi as per your wiring plan:
         ```bash
         pip install -r requirements.txt
         ```
-    
-    Alternatif olarak manuel yüklemek için:
+    > Alternatif olarak manuel yüklemek için:
         ```bash
         pip install openai flask sounddevice scipy numpy RPi.GPIO gpiozero pyserial speechbrain
         ```
@@ -114,28 +113,27 @@ Connect the following modules to the Raspberry Pi as per your wiring plan:
         ```
 
 4) Folder Structure
-    capstoneproject-automind-grup-14/
-    │
-    ├── mic_test.py                # Microphone test script
-    ├── speech_to_text.py          # Whisper-based voice transcription
-    ├── motor_surucu.py            # Motor control logic
-    ├── openai_tts.py              # Voice feedback generation using TTS
-    ├── server.py                  # Flask backend server
-    ├── kayit_al.py                # Live audio recording script
-    ├── canli_kayit_ve_tanima.py   # Live speaker verification
-    ├── authorized_uids.txt        # RFID authentication list
-    ├── requirements.txt           # Dependency list
+    - capstoneproject-automind-grup-14/
+    -> mic_test.py                # Microphone test script
+    -> speech_to_text.py          # Whisper-based voice transcription
+    -> motor_surucu.py            # Motor control logic
+    -> openai_tts.py              # Voice feedback generation using TTS
+    -> server.py                  # Flask backend server
+    -> kayit_al.py                # Live audio recording script
+    -> canli_kayit_ve_tanima.py   # Live speaker verification
+    -> authorized_uids.txt        # RFID authentication list
+    -> requirements.txt           # Dependency list
 
 5) Running the Project
     1. Start the Flask server on Raspberry Pi:
         ```bash
         python3 server.py
         ```
-    2. (Optional) Run the live recording + verification daemon:
+    2. > (Optional) Run the live recording + verification daemon:
         ```bash
         python3 canli_kayit_ve_tanima.py
         ```
-    3. On the mobile app, send commands or start recording.
+    3. > On the mobile app, send commands or start recording.
         > canli_kayit_ve_tanima.py will only activate if a valid RFID card was scanned and written to arac_durum.txt.
 
 6) First-Time Setup Notes

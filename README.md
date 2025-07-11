@@ -19,47 +19,47 @@ This project demonstrates the integration of speech recognition, natural languag
 
 ## Features
 1) Key Functionalities
-- Voice-Controlled Autonomy: The vehicle receives and processes Turkish voice commands to perform autonomous navigation tasks without manual input.
-- User Authentication via RFID: Only authorized users can operate the vehicle through RFID card validation.
-- Real-Time Mobile App Interface: Users can monitor vehicle status, command execution, and log messages via a Flutter-based mobile app.
-- Command Understanding via LLM: Natural language commands are interpreted and converted into actionable JSON structures by a language model.
-- Obstacle Detection and Avoidance: Ultrasonic sensor ensures safe navigation by detecting and reacting to nearby obstacles.
-- Direction-Aware Turning: Integrated gyroscope (MPU-6050) enables accurate rotational control during turns.
+    - Voice-Controlled Autonomy: The vehicle receives and processes Turkish voice commands to perform autonomous navigation tasks without manual input.
+    - User Authentication via RFID: Only authorized users can operate the vehicle through RFID card validation.
+    - Real-Time Mobile App Interface: Users can monitor vehicle status, command execution, and log messages via a Flutter-based mobile app.
+    - Command Understanding via LLM: Natural language commands are interpreted and converted into actionable JSON structures by a language model.
+    - Obstacle Detection and Avoidance: Ultrasonic sensor ensures safe navigation by detecting and reacting to nearby obstacles.
+    - Direction-Aware Turning: Integrated gyroscope (MPU-6050) enables accurate rotational control during turns.
 
 2) Hardware Components
-- Raspberry Pi 5 – The main processing unit.
-- Bluetooth Microphone – For wireless audio input.
-- MPU-6050 Gyroscope – For detecting angular movement and orientation.
-- HC-SR04 Ultrasonic Sensor – For distance measurement and obstacle detection.
-- L298N Motor Driver – Controls the vehicle's DC motors.
-- RC522 RFID Reader + Tags – Used for verifying authorized users.
-- DC Geared Motors – Enable forward/backward movement and turning.
-- Power Supply (12V Battery + 5V Regulator) – Powers all onboard components.
-- microSD Card – For OS and software storage.
+    - Raspberry Pi 5 – The main processing unit.
+    - Bluetooth Microphone – For wireless audio input.
+    - MPU-6050 Gyroscope – For detecting angular movement and orientation.
+    - HC-SR04 Ultrasonic Sensor – For distance measurement and obstacle detection.
+    - L298N Motor Driver – Controls the vehicle's DC motors.
+    - RC522 RFID Reader + Tags – Used for verifying authorized users.
+    - DC Geared Motors – Enable forward/backward movement and turning.
+    - Power Supply (12V Battery + 5V Regulator) – Powers all onboard components.
+    - microSD Card – For OS and software storage.
 
 3) Operating System & Packages
-- OS: Raspberry Pi OS (Bookworm)
-- Programming Language: Python 3.11
-- Key Python Libraries:
-openai – For Whisper and GPT API access
-sounddevice, scipy, ffmpeg – For audio recording and processing
-speechbrain, resemblyzer – For speaker verification
-RPi.GPIO, gpiozero – For motor and sensor control
-flask, requests – For API and mobile interface
-pyserial – For UART communication with RFID module
+    - OS: Raspberry Pi OS (Bookworm)
+    - Programming Language: Python 3.11
+    - Key Python Libraries:
+        openai – For Whisper and GPT API access
+        sounddevice, scipy, ffmpeg – For audio recording and processing
+        speechbrain, resemblyzer – For speaker verification
+        RPi.GPIO, gpiozero – For motor and sensor control
+        flask, requests – For API and mobile interface
+        pyserial – For UART communication with RFID module
 
 4) Applications
-- Voice-Based Vehicle Control: Enables hands-free vehicle operation using natural spoken commands.
-- Access Restriction via RFID: Prevents unauthorized use by requiring RFID authentication.
-- Mobile Monitoring App: Shows real-time system state, sensor logs, and command execution feedback.
-- Autonomous Driving Logic: Uses LLM output to control movement based on conditions (e.g., “move forward until obstacle”).
+    - Voice-Based Vehicle Control: Enables hands-free vehicle operation using natural spoken commands.
+    - Access Restriction via RFID: Prevents unauthorized use by requiring RFID authentication.
+    - Mobile Monitoring App: Shows real-time system state, sensor logs, and command execution feedback.
+    - Autonomous Driving Logic: Uses LLM output to control movement based on conditions (e.g., “move forward until obstacle”).
 
 5) Services
-- Speech Recognition Service: Converts live recorded audio to text using OpenAI Whisper.
-- Command Parsing Engine: Converts text commands into structured JSON control instructions using GPT-4.
-- Real-Time Flask API: Handles mobile app communication for sending/receiving commands and monitoring status.
-- Voice Feedback: Generates real-time spoken feedback using OpenAI TTS ("Nova" voice).
-- Speaker Verification: Ensures only known users can give commands using embedding-based audio comparison.
+    - Speech Recognition Service: Converts live recorded audio to text using OpenAI Whisper.
+    - Command Parsing Engine: Converts text commands into structured JSON control instructions using GPT-4.
+    - Real-Time Flask API: Handles mobile app communication for sending/receiving commands and monitoring status.
+    - Voice Feedback: Generates real-time spoken feedback using OpenAI TTS ("Nova" voice).
+    - Speaker Verification: Ensures only known users can give commands using embedding-based audio comparison.
 
 ## Installation
 Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.

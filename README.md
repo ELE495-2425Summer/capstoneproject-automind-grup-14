@@ -41,12 +41,12 @@ This project demonstrates the integration of speech recognition, natural languag
     - OS: Raspberry Pi OS (Bookworm)
     - Programming Language: Python 3.11
     - Key Python Libraries:
-        openai – For Whisper and GPT API access
-        sounddevice, scipy, ffmpeg – For audio recording and processing
-        speechbrain, resemblyzer – For speaker verification
-        RPi.GPIO, gpiozero – For motor and sensor control
-        flask, requests – For API and mobile interface
-        pyserial – For UART communication with RFID module
+        - openai – For Whisper and GPT API access
+        - sounddevice, scipy, ffmpeg – For audio recording and processing
+        - speechbrain, resemblyzer – For speaker verification
+        - RPi.GPIO, gpiozero – For motor and sensor control
+        - flask, requests – For API and mobile interface
+        - pyserial – For UART communication with RFID module
 
 4) Applications
     - Voice-Based Vehicle Control: Enables hands-free vehicle operation using natural spoken commands.

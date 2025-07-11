@@ -103,7 +103,7 @@ Connect the following modules to the Raspberry Pi as per your wiring plan:
         ```bash
         pip install -r requirements.txt
         ```
-    > Alternatif olarak manuel yüklemek için:
+    Alternatif olarak manuel yüklemek için:
         ```bash
         pip install openai flask sounddevice scipy numpy RPi.GPIO gpiozero pyserial speechbrain
         ```
@@ -129,12 +129,12 @@ Connect the following modules to the Raspberry Pi as per your wiring plan:
         ```bash
         python3 server.py
         ```
-    2. > (Optional) Run the live recording + verification daemon:
+    < (Optional) Run the live recording + verification daemon:
         ```bash
         python3 canli_kayit_ve_tanima.py
         ```
-    3. > On the mobile app, send commands or start recording.
-        > canli_kayit_ve_tanima.py will only activate if a valid RFID card was scanned and written to arac_durum.txt.
+    > On the mobile app, send commands or start recording.
+        canli_kayit_ve_tanima.py will only activate if a valid RFID card was scanned and written to arac_durum.txt.
 
 6) First-Time Setup Notes
     - Bluetooth Microphone: Pair using GUI or bluetoothctl.

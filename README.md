@@ -105,7 +105,7 @@ This project demonstrates the integration of speech recognition, natural languag
         ```bash
         pip install openai flask sounddevice scipy numpy RPi.GPIO gpiozero pyserial speechbrain
         ```
-        > ffmpeg paketinin sistemde kurulu olması gerekir. Kurulum:
+        > ffmpeg paketinin sistemde kurulu olması gerekir.
         ```bash
         sudo apt install ffmpeg"
         ```
@@ -146,7 +146,76 @@ This project demonstrates the integration of speech recognition, natural languag
     - Animations and vehicle status are reflected in the Flutter-based mobile app.
 
 ## Usage
-Provide instructions and examples on how to use the project. Include code snippets or screenshots where applicable.
+1) Power Up the System
+    - Turn on your Raspberry Pi and ensure that the vehicle is powered via the 12V battery for L298N motor driver.
+    - Ensure your Bluetooth microphone is powered and connected.
+    - Ensure the RFID reader is wired and positioned properly.
+
+2) Authenticate the User (RFID)
+    - Only authorized users can activate the system. Place an authorized RFID card near the reader.
+    - If the UID matches a known user, the system writes "araç çalıştı" to arac_durum.txt.
+    > Unauthorized cards will be rejected. You can edit allowed UIDs in authorized_uids.txt.
+
+3) Start the Flask Server
+    - Server handles mobile app communication and triggers the listening pipeline.
+    - Once the server is running, the mobile app can send commands to start voice recording. A .txt trigger file (flask_basla.txt) will be created automatically to signal audio capture.
+
+4) Start Continuous Background Listener (Optional)
+    - To always keep the vehicle ready for speech recognition upon valid RFID and signal:
+python3 canli_kayit_ve_tanima.py
+This script monitors flask_basla.txt.
+
+When the file says "basla", it begins recording and sends audio to Whisper for transcription and to Speaker ID system for user check.
+
+5) Voice Command Workflow (Automatic)
+    - After background listener is triggered, audio is recorded with sounddevice. The file is saved locally, converted to .wav, and checked with speechbrain or Resemblyzer for user identity.
+    - If voice is verified, whisper transcribes the command (e.g., "engel çıkana kadar düz git").
+    - GPT model parses the transcription into JSON like {"komut": "ileri_git", "kosul": "engel_algilayana_kadar"}
+    - motor_surucu.py receives the JSON and moves the vehicle accordingly.
+    - Voice feedback is generated with OpenAI TTS ("Nova") and played, e.g., "İleri gidiyorum."
+
+6) Monitor the System
+    - All actions and logs are saved in:
+        - server_log.txt – full log
+        - transkript.txt – recognized voice command
+        - durum.txt – current vehicle state
+    - Logs can be tailed,
+        ```bash
+        tail -f server_log.txt
+        ```
+
+7) Example Commands
+    - Start the Flask server
+        ```bash
+        python3 server.py
+        ```
+    - Authenticate and allow vehicle
+        ```bash
+        python3 kayit_al.py
+        ```
+    - Start background listening loop
+        ```bash
+        python3 canli_kayit_ve_tanima.py
+        ```
+    - Force speech recognition manually (for debug)
+        ```bash
+        python3 speech_to_text.py
+        ```
+
+8) Mobile App Usage
+    - Connect to the same Wi-Fi network as the Raspberry Pi.
+    - Enter the Raspberry Pi IP in the app.
+    - Press the “Start Listening” button.
+    - Say a command like, "Geri dön ve sağa dön."
+    - The app will show command log and status animations.
+
+9) Stopping the System
+    - Press CTRL+C in the terminal where canli_kayit_ve_tanima.py is running. Or delete the flask_basla.txt file manually.
+
+- Notes
+    - Ensure your OpenAI API key is correctly set in openai.api_key field.
+    - Ensure ffmpeg is installed for audio file conversion.
+    - Avoid background noise during voice recognition.
 
 ## Screenshots
 Include screenshots of the project in action to give a visual representation of its functionality. You can also add videos of running project to YouTube and give a reference to it here. 

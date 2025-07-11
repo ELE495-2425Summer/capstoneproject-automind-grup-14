@@ -62,7 +62,82 @@ This project demonstrates the integration of speech recognition, natural languag
     - Speaker Verification: Ensures only known users can give commands using embedding-based audio comparison.
 
 ## Installation
-Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
+
+1) Prerequisites
+    - Raspberry Pi 5 (with internet access)
+    - Raspberry Pi OS (Bookworm 64-bit) installed and bootable on a microSD card
+    - SSH access or monitor + keyboard setup
+    - Internet connection for package installations
+    - A verified OpenAI API key
+    > Optional: Android device with the mobile app (for remote control)
+    > Describe the steps required to install and set up the project. Include any prerequisites, dependencies, and commands needed to get the project running.
+
+2) Hardware Connections
+Connect the following modules to the Raspberry Pi as per your wiring plan:
+
+    - L298N Motor Driver: Connect ENA, ENB, IN1–IN4 to GPIO pins (e.g., 12, 13, 17, 18, 22, 23)
+    - HC-SR04 Ultrasonic Sensor: Connect Trig and Echo to GPIO (e.g., GPIO5, GPIO6)
+    - MPU-6050 Gyroscope: Connect to I2C pins (SDA = GPIO2, SCL = GPIO3)
+    - RC522 RFID Reader: Connect via UART (e.g., GPIO14 TX, GPIO15 RX)
+    - Bluetooth Microphone: Pair over Bluetooth via the GUI or bluetoothctl
+    - Power Supply: 12V battery (L298N) + 5V step-down for Raspberry Pi
+    > Ensure GPIOs are protected with voltage dividers, zener diodes, or opto-isolators if needed.
+
+3) Software Setup
+    1. Update System & Install Git
+        sudo apt update && sudo apt upgrade -y
+        sudo apt install git python3-pip python3-venv -y
+    2. Clone the Repository
+        git clone https://github.com/ELE495-2425Summer/capstoneproject-automind-grup-14.git
+        cd capstoneproject-automind-grup-14
+    3. Create Virtual Environment (Optional but Recommended)
+        python3 -m venv venv
+        source venv/bin/activate
+    4. Install Python Dependencies
+        pip install -r requirements.txt
+    
+    Alternatif olarak manuel yüklemek için:
+        pip install openai flask sounddevice scipy numpy RPi.GPIO gpiozero pyserial speechbrain
+        > ffmpeg paketinin sistemde kurulu olması gerekir. Kurulum:
+        sudo apt install ffmpeg"
+
+4) Folder Structure
+    capstoneproject-automind-grup-14/
+    │
+    ├── mic_test.py                 # Microphone test script
+    ├── speech_to_text.py          # Whisper-based voice transcription
+    ├── motor_surucu.py            # Motor control logic
+    ├── openai_tts.py              # Voice feedback generation using TTS
+    ├── server.py                  # Flask backend server
+    ├── kayit_al.py                # Live audio recording script
+    ├── canli_kayit_ve_tanima.py   # Live speaker verification
+    ├── authorized_uids.txt        # RFID authentication list
+    ├── requirements.txt           # Dependency list
+
+5) Running the Project
+    1. Start the Flask server on Raspberry Pi:
+        python3 server.py
+    2. (Optional) Run the live recording + verification daemon:
+        python3 canli_kayit_ve_tanima.py
+    3. On the mobile app, send commands or start recording.
+        > canli_kayit_ve_tanima.py will only activate if a valid RFID card was scanned and written to arac_durum.txt.
+
+6) First-Time Setup Notes
+    - Bluetooth Microphone: Pair using GUI or bluetoothctl.
+    - RFID Setup: The Raspberry Pi must be connected to the RFID module via UART. kayit_al.py will detect and log authorized UID cards.
+    - API Key Setup: Ensure OpenAI API key is defined in your Python scripts or environment.
+        openai.api_key = "sk-..."
+
+Additional Notes
+All voice interactions are in Turkish.
+
+Whisper API is used online, so stable internet is required.
+
+Output logs are written to server_log.txt.
+
+Animations and vehicle status are reflected in the Flutter-based mobile app.
+
+
 
 ```bash
 # Example commands

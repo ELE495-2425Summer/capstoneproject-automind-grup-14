@@ -112,42 +112,38 @@ This project demonstrates the integration of speech recognition, natural languag
 
 4) Folder Structure
     - capstoneproject-automind-grup-14/
-    >mic_test.py                # Microphone test script
-    >speech_to_text.py          # Whisper-based voice transcription
-    >motor_surucu.py            # Motor control logic
-    >openai_tts.py              # Voice feedback generation using TTS
-    >server.py                  # Flask backend server
-    >kayit_al.py                # Live audio recording script
-    >canli_kayit_ve_tanima.py   # Live speaker verification
-    >authorized_uids.txt        # RFID authentication list
-    >requirements.txt           # Dependency list
+    > mic_test.py                # Microphone test script
+    > speech_to_text.py          # Whisper-based voice transcription
+    > motor_surucu.py            # Motor control logic
+    > openai_tts.py              # Voice feedback generation using TTS
+    > server.py                  # Flask backend server
+    > kayit_al.py                # Live audio recording script
+    > canli_kayit_ve_tanima.py   # Live speaker verification
+    > authorized_uids.txt        # RFID authentication list
+    > requirements.txt           # Dependency list
 
 5) Running the Project
     1. Start the Flask server on Raspberry Pi:
         ```bash
         python3 server.py
         ```
-    < (Optional) Run the live recording + verification daemon:
+    - (Optional) Run the live recording + verification daemon:
         ```bash
         python3 canli_kayit_ve_tanima.py
         ```
-    > On the mobile app, send commands or start recording.
-        canli_kayit_ve_tanima.py will only activate if a valid RFID card was scanned and written to arac_durum.txt.
+    - On the mobile app, send commands or start recording.
+        > canli_kayit_ve_tanima.py will only activate if a valid RFID card was scanned and written to arac_durum.txt.
 
 6) First-Time Setup Notes
-    - Bluetooth Microphone: Pair using GUI or bluetoothctl.
-    - RFID Setup: The Raspberry Pi must be connected to the RFID module via UART. kayit_al.py will detect and log authorized UID cards.
-    - API Key Setup: Ensure OpenAI API key is defined in your Python scripts or environment.
-        openai.api_key = "sk-..."
+    - Pair the Bluetooth microphone using GUI or bluetoothctl.
+    - The Raspberry Pi must be connected to the RFID module via UART. kayit_al.py will detect and log authorized UID cards.
+    - Ensure OpenAI API key is defined in your Python scripts or environment, openai.api_key = "sk-...".
 
-Additional Notes
-All voice interactions are in Turkish.
-
-Whisper API is used online, so stable internet is required.
-
-Output logs are written to server_log.txt.
-
-Animations and vehicle status are reflected in the Flutter-based mobile app.
+7) Additional Notes
+    - All voice interactions are in Turkish.
+    - Whisper API is used online.
+    - Output logs are written to server_log.txt.
+    - Animations and vehicle status are reflected in the Flutter-based mobile app.
 
 ## Usage
 Provide instructions and examples on how to use the project. Include code snippets or screenshots where applicable.

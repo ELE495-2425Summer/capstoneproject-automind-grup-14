@@ -101,7 +101,7 @@ This project demonstrates the integration of speech recognition, natural languag
         ```bash
         pip install -r requirements.txt
         ```
-    Alternatif olarak manuel yüklemek için:
+    - Alternatif olarak manuel yüklemek için:
         ```bash
         pip install openai flask sounddevice scipy numpy RPi.GPIO gpiozero pyserial speechbrain
         ```
@@ -112,15 +112,15 @@ This project demonstrates the integration of speech recognition, natural languag
 
 4) Folder Structure
     - capstoneproject-automind-grup-14/
-    > mic_test.py                # Microphone test script
-    > speech_to_text.py          # Whisper-based voice transcription
-    > motor_surucu.py            # Motor control logic
-    > openai_tts.py              # Voice feedback generation using TTS
-    > server.py                  # Flask backend server
-    > kayit_al.py                # Live audio recording script
-    > canli_kayit_ve_tanima.py   # Live speaker verification
-    > authorized_uids.txt        # RFID authentication list
-    > requirements.txt           # Dependency list
+        - mic_test.py                # Microphone test script
+        - speech_to_text.py          # Whisper-based voice transcription
+        - motor_surucu.py            # Motor control logic
+        - openai_tts.py              # Voice feedback generation using TTS
+        - server.py                  # Flask backend server
+        - kayit_al.py                # Live audio recording script
+        - canli_kayit_ve_tanima.py   # Live speaker verification
+        - authorized_uids.txt        # RFID authentication list
+        - requirements.txt           # Dependency list
 
 5) Running the Project
     1. Start the Flask server on Raspberry Pi:

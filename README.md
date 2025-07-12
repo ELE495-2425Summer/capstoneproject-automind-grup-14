@@ -34,7 +34,8 @@ This project demonstrates the integration of speech recognition, natural languag
     - L298N Motor Driver – Controls the vehicle's DC motors.
     - RC522 RFID Reader + Tags – Used for verifying authorized users.
     - DC Geared Motors – Enable forward/backward movement and turning.
-    - Power Supply (12V Battery + 5V Regulator) – Powers all onboard components.
+    - Power Supply (3.7V x 3 serial 18650 Li-Ion 12V Battery) – Powers L298N motor driver.
+    - Power Bank – Powers Raspberry Pi 5.
     - microSD Card – For OS and software storage.
 
 3) Operating System & Packages
@@ -240,6 +241,10 @@ We gratefully acknowledge the use of the following technologies, libraries, and 
 
 [OpenAI Whisper & GPT APIs](https://platform.openai.com/) – for transcription and natural language understanding
 
+[gpiozero](https://gpiozero.readthedocs.io/en/stable/) – for controlling Raspberry Pi hardware easily
+
+[sounddevice](https://python-sounddevice.readthedocs.io/en/0.5.1/) – for live audio capture
+
 [Speach Brain](https://speechbrain.readthedocs.io/en/latest/) – for speaker verification
 
 [Resemblyzer](https://github.com/resemble-ai/Resemblyzer) – for alternative lightweight voice authentication
@@ -247,9 +252,5 @@ We gratefully acknowledge the use of the following technologies, libraries, and 
 [Flask](https://flask.palletsprojects.com/en/stable/) – for REST API and mobile backend
 
 [Flutter](https://flutter.dev/) – for building the mobile interface
-
-[gpiozero](https://gpiozero.readthedocs.io/en/stable/) – for controlling Raspberry Pi hardware easily
-
-[sounddevice](https://python-sounddevice.readthedocs.io/en/0.5.1/) – for live audio capture
 
 We would also like to thank the open-source community, whose documentation, libraries, and examples were crucial to the success of this project.

@@ -53,13 +53,13 @@ This project demonstrates the integration of speech recognition, natural languag
     - Voice-Based Vehicle Control: Enables hands-free vehicle operation using natural spoken commands.
     - Access Restriction via RFID: Prevents unauthorized use by requiring RFID authentication.
     - Mobile Monitoring App: Shows real-time system state, sensor logs, and command execution feedback.
-    - Autonomous Driving Logic: Uses LLM output to control movement based on conditions (e.g., `“engel çıkana kadar ilerle”`).
+    - Autonomous Driving Logic: Uses LLM output to control movement based on conditions (e.g., `"engel çıkana kadar ilerle"`).
 
 5) Services
     - Speech Recognition Service: Converts live recorded audio to text using OpenAI Whisper.
     - Command Parsing Engine: Converts text commands into structured JSON control instructions using GPT-4.
     - Real-Time Flask API: Handles mobile app communication for sending/receiving commands and monitoring status.
-    - Voice Feedback: Generates real-time spoken feedback using OpenAI TTS (`“Nova”` voice).
+    - Voice Feedback: Generates real-time spoken feedback using OpenAI TTS (`"Nova"` voice).
     - Speaker Verification: Ensures only known users can give commands using embedding-based audio comparison.
 
 ## Installation
@@ -138,7 +138,7 @@ This project demonstrates the integration of speech recognition, natural languag
 6) First-Time Setup Notes
     - Pair the Bluetooth microphone using GUI or bluetoothctl.
     - The Raspberry Pi must be connected to the RFID module via UART. `kayit_al.py` will detect and log authorized UID cards.
-    - Ensure OpenAI API key is defined in your Python scripts or environment, openai.api_key = `“sk-...”`.
+    - Ensure OpenAI API key is defined in your Python scripts or environment, openai.api_key = `"sk-..."`.
 
 7) Additional Notes
     - All voice interactions are in Turkish.
@@ -158,7 +158,7 @@ This project demonstrates the integration of speech recognition, natural languag
 
 3) Authenticate the User (RFID)
     - Only authorized users can activate the system. Place an authorized RFID card near the reader.
-    - If the UID matches a known user, the system writes `“araç çalıştı”` to `arac_durum.txt`.
+    - If the UID matches a known user, the system writes `"araç çalıştı"` to `arac_durum.txt`.
     > Unauthorized cards will be rejected. You can edit allowed UIDs in `authorized_uids.txt`.
 
 4) Start Continuous Background Listener (Optional)
@@ -167,20 +167,20 @@ This project demonstrates the integration of speech recognition, natural languag
     python3 canli_kayit_ve_tanima.py
     ```
     - This script monitors `flask_basla.txt`.
-    - When the file says `“basla”`, it begins recording and sends audio to Whisper for transcription and to Speaker ID system for user check.
+    - When the file says `"basla"`, it begins recording and sends audio to Whisper for transcription and to Speaker ID system for user check.
 
 5) Voice Command Workflow (Automatic)
     - After background listener is triggered, audio is recorded with sounddevice. The file is saved locally, converted to .wav, and checked with speechbrain or Resemblyzer for user identity.
-    - If voice is verified, whisper transcribes the command (e.g., `“engel çıkana kadar düz git”`).
+    - If voice is verified, whisper transcribes the command (e.g., `"engel çıkana kadar düz git"`).
     - GPT model parses the transcription into JSON like `{"komut": "ileri_git", "kosul": "engel_algilayana_kadar", "sure": "-", "mesafe": "-"}`.
     - `motor_surucu.py` receives the JSON and moves the vehicle accordingly.
-    - Voice feedback is generated with OpenAI TTS (`“Nova”`) and played, e.g., `“ileri gidiyorum”`.
+    - Voice feedback is generated with OpenAI TTS (`"Nova"`) and played, e.g., `"ileri gidiyorum"`.
 
 6) Monitor the System
     - All actions and logs are saved in:
         - `server_log.txt` – full log
         - `transkript.txt` – recognized voice command
-        - durum.txt – current vehicle state
+        - `durum.txt` – current vehicle state
     - Logs can be tailed,
         ```bash
         tail -f server_log.txt
@@ -207,8 +207,8 @@ This project demonstrates the integration of speech recognition, natural languag
 8) Mobile App Usage
     - Connect to the same Wi-Fi network as the Raspberry Pi.
     - Enter the Raspberry Pi IP in the app.
-    - Press the `“dinlemeye başla”` button.
-    - Say a command like, `“geri dön ve sağa dön”`.
+    - Press the `"dinlemeye başla"` button.
+    - Say a command like, `"geri dön ve sağa dön"`.
     - The app will show command log and status animations.
 
 9) Stopping the System
@@ -229,7 +229,7 @@ Mobile Application Interface
 
 Project Demo Video
 
-https://www.youtube.com/watch?v=dupXn58BU14&ab_channel=Graficco
+📽️ [Click here to watch the video](https://www.youtube.com/watch?v=dupXn58BU14)
 
 ## Acknowledgements
 This project was made possible through the collaboration of our dedicated team members and the use of several open-source tools and platforms. We would like to express our sincere gratitude to everyone who supported and contributed to the development process.

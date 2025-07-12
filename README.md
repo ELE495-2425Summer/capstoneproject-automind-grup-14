@@ -221,10 +221,6 @@ When the file says "basla", it begins recording and sends audio to Whisper for t
 Include screenshots of the project in action to give a visual representation of its functionality. You can also add videos of running project to YouTube and give a reference to it here. 
 
 ## Acknowledgements
-Give credit to those who have contributed to the project or provided inspiration. Include links to any resources or tools used in the project.
-
-
-
 This project was made possible through the collaboration of our dedicated team members and the use of several open-source tools and platforms. We would like to express our sincere gratitude to everyone who supported and contributed to the development process.
 
 Contributors
@@ -237,30 +233,23 @@ Contributors
 Special thanks to our academic advisor Dr. Ali Murat Demirtaş for his continuous guidance and feedback throughout the project.
 
 Tools and Resources
-[Resource or Tool](https://www.nvidia.com)
 
 We gratefully acknowledge the use of the following technologies, libraries, and platforms:
 
-Raspberry Pi Foundation – for the development platform and GPIO ecosystem
+[Raspberry Pi Foundation](https://www.raspberrypi.org/) – for the development platform and GPIO ecosystem
 
-OpenAI Whisper & GPT APIs – for transcription and natural language understanding
+[OpenAI Whisper & GPT APIs](https://platform.openai.com/) – for transcription and natural language understanding
 
-Google TTS – for generating voice responses
+[Speach Brain](https://speechbrain.readthedocs.io/en/latest/) – for speaker verification
 
-SpeechBrain – for speaker verification
+[Resemblyzer](https://github.com/resemble-ai/Resemblyzer) – for alternative lightweight voice authentication
 
-Resemblyzer – for alternative lightweight voice authentication
+[Flask](https://flask.palletsprojects.com/en/stable/) – for REST API and mobile backend
 
-Flask – for REST API and mobile backend
+[Flutter](https://flutter.dev/) – for building the mobile interface
 
-Flutter – for building the mobile interface
+[gpiozero](https://gpiozero.readthedocs.io/en/stable/) – for controlling Raspberry Pi hardware easily
 
-gpiozero – for controlling Raspberry Pi hardware easily
-
-sounddevice – for live audio capture
-
-L298N Motor Driver Docs – motor control reference
-
-MPU6050 Datasheet – for gyro handling
+[sounddevice](https://python-sounddevice.readthedocs.io/en/0.5.1/) – for live audio capture
 
 We would also like to thank the open-source community, whose documentation, libraries, and examples were crucial to the success of this project.

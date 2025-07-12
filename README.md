@@ -37,7 +37,7 @@ This project demonstrates the integration of speech recognition, natural languag
     - Power Supply (3.7V x 3 serial 18650 Li-Ion battery) – Powers L298N motor driver.
     - Power Bank – Powers Raspberry Pi 5.
     - microSD Card – For OS and software storage.
-    
+
 3) Operating System & Packages
     - OS: Raspberry Pi OS (Bookworm)
     - Programming Language: Python 3.11
@@ -147,12 +147,12 @@ This project demonstrates the integration of speech recognition, natural languag
     - Animations and vehicle status are reflected in the Flutter-based mobile app.
 
 ## Usage
-### 1) Power Up the System
+1) Power Up the System
     - Turn on your Raspberry Pi and ensure that the vehicle is powered via the 12V battery for L298N motor driver.
     - Ensure your Bluetooth microphone is powered and connected.
     - Ensure the RFID reader is wired and positioned properly.
 
-#### 2) Start the Flask Server
+2) Start the Flask Server
     - Server handles mobile app communication and triggers the listening pipeline.
     - Once the server is running, the mobile app can send commands to start voice recording. A .txt trigger file (flask_basla.txt) will be created automatically to signal audio capture.
 
@@ -163,8 +163,10 @@ This project demonstrates the integration of speech recognition, natural languag
 
 4) Start Continuous Background Listener (Optional)
     - To always keep the vehicle ready for speech recognition upon valid RFID and signal:
-python3 canli_kayit_ve_tanima.py
-This script monitors flask_basla.txt.
+    ```bash
+    python3 canli_kayit_ve_tanima.py
+    ```
+    - This script monitors flask_basla.txt.
 
 When the file says "basla", it begins recording and sends audio to Whisper for transcription and to Speaker ID system for user check.
 

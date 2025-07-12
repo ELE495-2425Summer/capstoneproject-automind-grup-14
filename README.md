@@ -7,6 +7,7 @@
 - [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Acknowledgements](#acknowledgements)
+- [LICENSE](#license)
 
 ## Introduction
 This capstone project aims to develop a voice-controlled autonomous ground vehicle using Raspberry Pi 5. The system is designed to understand and execute natural spoken commands in Turkish, enabling hands-free interaction with the vehicle.

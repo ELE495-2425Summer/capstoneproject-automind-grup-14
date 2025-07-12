@@ -108,7 +108,7 @@ This project demonstrates the integration of speech recognition, natural languag
         ```
         > ffmpeg paketinin sistemde kurulu olması gerekir.
         ```bash
-        sudo apt install ffmpeg"
+        sudo apt install ffmpeg
         ```
 
 4) Folder Structure
@@ -217,14 +217,15 @@ This project demonstrates the integration of speech recognition, natural languag
 - Notes
     - Ensure your OpenAI API key is correctly set in openai.api_key field.
     - Ensure ffmpeg is installed for audio file conversion.
+    ```bash
+    sudo apt install ffmpeg
+    ```
     - Avoid background noise during voice recognition.
 
 ## Screenshots
 Mobile Application Interface
 
 ![Mobile Application Interface](Mobile_Application_Interface.png)
-
-
 
 Project Demo Video
 
@@ -247,7 +248,7 @@ Special thanks to our academic advisor Dr. Ali Murat Demirtaş for his continuou
     - [OpenAI Whisper & GPT APIs](https://platform.openai.com/) – for transcription and natural language understanding
     - [gpiozero](https://gpiozero.readthedocs.io/en/stable/) – for controlling Raspberry Pi hardware easily
     - [sounddevice](https://python-sounddevice.readthedocs.io/en/0.5.1/) – for live audio capture
-    - [Speach Brain](https://speechbrain.readthedocs.io/en/latest/) – for speaker verification
+    - [SpeechBrain](https://speechbrain.readthedocs.io/en/latest/) – for speaker verification
     - [Resemblyzer](https://github.com/resemble-ai/Resemblyzer) – for alternative lightweight voice authentication
     - [Flask](https://flask.palletsprojects.com/en/stable/) – for REST API and mobile backend
     - [Flutter](https://flutter.dev/) – for building the mobile interface

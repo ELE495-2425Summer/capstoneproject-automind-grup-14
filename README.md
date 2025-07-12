@@ -219,8 +219,8 @@ When the file says "basla", it begins recording and sends audio to Whisper for t
     - Avoid background noise during voice recognition.
 
 ## Screenshots
+- Mobile Application Interface
 ![Mobile Application Interface](Mobile_Application_Interface.png)
-Include screenshots of the project in action to give a visual representation of its functionality. You can also add videos of running project to YouTube and give a reference to it here. 
 
 ## Acknowledgements
 This project was made possible through the collaboration of our dedicated team members and the use of several open-source tools and platforms. We would like to express our sincere gratitude to everyone who supported and contributed to the development process.

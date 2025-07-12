@@ -53,7 +53,7 @@ This project demonstrates the integration of speech recognition, natural languag
     - Voice-Based Vehicle Control: Enables hands-free vehicle operation using natural spoken commands.
     - Access Restriction via RFID: Prevents unauthorized use by requiring RFID authentication.
     - Mobile Monitoring App: Shows real-time system state, sensor logs, and command execution feedback.
-    - Autonomous Driving Logic: Uses LLM output to control movement based on conditions (e.g., “move forward until obstacle”).
+    - Autonomous Driving Logic: Uses LLM output to control movement based on conditions (e.g., `“engel çıkana kadar ilerle”`).
 
 5) Services
     - Speech Recognition Service: Converts live recorded audio to text using OpenAI Whisper.
@@ -82,23 +82,23 @@ This project demonstrates the integration of speech recognition, natural languag
     > Ensure GPIOs are protected with voltage dividers, zener diodes, or opto-isolators if needed.
 
 3) Software Setup
-    1. Update System & Install Git
+    1) Update System & Install Git
         ```bash
         sudo apt update
         sudo apt upgrade -y
         sudo apt install git python3-pip python3-venv -y
         ```
-    2. Clone the Repository
+    2) Clone the Repository
         ```bash
         git clone https://github.com/ELE495-2425Summer/capstoneproject-automind-grup-14.git
         cd capstoneproject-automind-grup-14
         ```
-    3. Create Virtual Environment (Optional but Recommended)
+    3) Create Virtual Environment (Optional but Recommended)
         ```bash
         python3 -m venv venv
         source venv/bin/activate
         ```
-    4. Install Python Dependencies
+    4) Install Python Dependencies
         ```bash
         pip install -r requirements.txt
         ```
@@ -124,7 +124,7 @@ This project demonstrates the integration of speech recognition, natural languag
         - `requirements.txt`           # Dependency list
 
 5) Running the Project
-    1. Start the Flask server on Raspberry Pi:
+    1) Start the Flask server on Raspberry Pi:
         ```bash
         python3 server.py
         ```
@@ -133,7 +133,7 @@ This project demonstrates the integration of speech recognition, natural languag
         python3 canli_kayit_ve_tanima.py
         ```
     - On the mobile app, send commands or start recording.
-        > canli_kayit_ve_tanima.py will only activate if a valid RFID card was scanned and written to `arac_durum.txt`.
+        > `canli_kayit_ve_tanima.py` will only activate if a valid RFID card was scanned and written to `arac_durum.txt`.
 
 6) First-Time Setup Notes
     - Pair the Bluetooth microphone using GUI or bluetoothctl.
@@ -171,10 +171,10 @@ This project demonstrates the integration of speech recognition, natural languag
 
 5) Voice Command Workflow (Automatic)
     - After background listener is triggered, audio is recorded with sounddevice. The file is saved locally, converted to .wav, and checked with speechbrain or Resemblyzer for user identity.
-    - If voice is verified, whisper transcribes the command (e.g., "engel çıkana kadar düz git").
+    - If voice is verified, whisper transcribes the command (e.g., `"engel çıkana kadar düz git"`).
     - GPT model parses the transcription into JSON like {"komut": "ileri_git", "kosul": "engel_algilayana_kadar"}
     - `motor_surucu.py` receives the JSON and moves the vehicle accordingly.
-    - Voice feedback is generated with OpenAI TTS ("Nova") and played, e.g., "İleri gidiyorum."
+    - Voice feedback is generated with OpenAI TTS ("Nova") and played, e.g., `"ileri gidiyorum"`.
 
 6) Monitor the System
     - All actions and logs are saved in:
@@ -207,8 +207,8 @@ This project demonstrates the integration of speech recognition, natural languag
 8) Mobile App Usage
     - Connect to the same Wi-Fi network as the Raspberry Pi.
     - Enter the Raspberry Pi IP in the app.
-    - Press the “Start Listening” button.
-    - Say a command like, "Geri dön ve sağa dön."
+    - Press the `“dinlemeye başla”` button.
+    - Say a command like, `"geri dön ve sağa dön"`.
     - The app will show command log and status animations.
 
 9) Stopping the System

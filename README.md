@@ -19,6 +19,7 @@ This project demonstrates the integration of speech recognition, natural languag
 
 ## Features
 ### Key Functionalities
+
     - Voice-Controlled Autonomy: The vehicle receives and processes Turkish voice commands to perform autonomous navigation tasks without manual input.
     - User Authentication via RFID: Only authorized users can operate the vehicle through RFID card validation.
     - Real-Time Mobile App Interface: Users can monitor vehicle status, command execution, and log messages via a Flutter-based mobile app.
@@ -27,6 +28,7 @@ This project demonstrates the integration of speech recognition, natural languag
     - Direction-Aware Turning: Integrated gyroscope (MPU-6050) enables accurate rotational control during turns.
 
 ### Hardware Components
+
     - Raspberry Pi 5 – The main processing unit.
     - Bluetooth Microphone – For wireless audio input.
     - MPU-6050 Gyroscope – For detecting angular movement and orientation.

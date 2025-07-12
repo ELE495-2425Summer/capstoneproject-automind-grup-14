@@ -148,13 +148,13 @@ This project demonstrates the integration of speech recognition, natural languag
 
 ## Usage
 1) Power Up the System
-    - Turn on your Raspberry Pi and ensure that the vehicle is powered via the 12V battery for L298N motor driver.
-    - Ensure your Bluetooth microphone is powered and connected.
+    - Turn on your Raspberry Pi and ensure that the vehicle is powered via the battery for L298N motor driver.
+    - Ensure your Bluetooth microphone and Bluetooth speaker is powered and connected.
     - Ensure the RFID reader is wired and positioned properly.
 
 2) Start the Flask Server
     - Server handles mobile app communication and triggers the listening pipeline.
-    - Once the server is running, the mobile app can send commands to start voice recording. A .txt trigger file (flask_basla.txt) will be created automatically to signal audio capture.
+    - Once the server is running, the mobile app can send commands to start voice recording. flask_basla.txt trigger file will be created automatically to signal audio capture.
 
 3) Authenticate the User (RFID)
     - Only authorized users can activate the system. Place an authorized RFID card near the reader.
@@ -167,8 +167,7 @@ This project demonstrates the integration of speech recognition, natural languag
     python3 canli_kayit_ve_tanima.py
     ```
     - This script monitors flask_basla.txt.
-
-When the file says "basla", it begins recording and sends audio to Whisper for transcription and to Speaker ID system for user check.
+    - When the file says "basla", it begins recording and sends audio to Whisper for transcription and to Speaker ID system for user check.
 
 5) Voice Command Workflow (Automatic)
     - After background listener is triggered, audio is recorded with sounddevice. The file is saved locally, converted to .wav, and checked with speechbrain or Resemblyzer for user identity.
@@ -204,7 +203,7 @@ When the file says "basla", it begins recording and sends audio to Whisper for t
         ```bash
         python3 speech_to_text.py
         ```
-
+        
 8) Mobile App Usage
     - Connect to the same Wi-Fi network as the Raspberry Pi.
     - Enter the Raspberry Pi IP in the app.

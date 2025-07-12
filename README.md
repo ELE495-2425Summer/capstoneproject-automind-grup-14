@@ -59,7 +59,7 @@ This project demonstrates the integration of speech recognition, natural languag
     - Speech Recognition Service: Converts live recorded audio to text using OpenAI Whisper.
     - Command Parsing Engine: Converts text commands into structured JSON control instructions using GPT-4.
     - Real-Time Flask API: Handles mobile app communication for sending/receiving commands and monitoring status.
-    - Voice Feedback: Generates real-time spoken feedback using OpenAI TTS ("Nova" voice).
+    - Voice Feedback: Generates real-time spoken feedback using OpenAI TTS (`“Nova”` voice).
     - Speaker Verification: Ensures only known users can give commands using embedding-based audio comparison.
 
 ## Installation
@@ -138,7 +138,7 @@ This project demonstrates the integration of speech recognition, natural languag
 6) First-Time Setup Notes
     - Pair the Bluetooth microphone using GUI or bluetoothctl.
     - The Raspberry Pi must be connected to the RFID module via UART. `kayit_al.py` will detect and log authorized UID cards.
-    - Ensure OpenAI API key is defined in your Python scripts or environment, openai.api_key = "sk-...".
+    - Ensure OpenAI API key is defined in your Python scripts or environment, openai.api_key = `“sk-...”`.
 
 7) Additional Notes
     - All voice interactions are in Turkish.
@@ -158,7 +158,7 @@ This project demonstrates the integration of speech recognition, natural languag
 
 3) Authenticate the User (RFID)
     - Only authorized users can activate the system. Place an authorized RFID card near the reader.
-    - If the UID matches a known user, the system writes `"araç çalıştı"` to `arac_durum.txt`.
+    - If the UID matches a known user, the system writes `“araç çalıştı”` to `arac_durum.txt`.
     > Unauthorized cards will be rejected. You can edit allowed UIDs in `authorized_uids.txt`.
 
 4) Start Continuous Background Listener (Optional)
@@ -167,14 +167,14 @@ This project demonstrates the integration of speech recognition, natural languag
     python3 canli_kayit_ve_tanima.py
     ```
     - This script monitors `flask_basla.txt`.
-    - When the file says "basla", it begins recording and sends audio to Whisper for transcription and to Speaker ID system for user check.
+    - When the file says `“basla”`, it begins recording and sends audio to Whisper for transcription and to Speaker ID system for user check.
 
 5) Voice Command Workflow (Automatic)
     - After background listener is triggered, audio is recorded with sounddevice. The file is saved locally, converted to .wav, and checked with speechbrain or Resemblyzer for user identity.
-    - If voice is verified, whisper transcribes the command (e.g., `"engel çıkana kadar düz git"`).
-    - GPT model parses the transcription into JSON like {"komut": "ileri_git", "kosul": "engel_algilayana_kadar"}
+    - If voice is verified, whisper transcribes the command (e.g., `“engel çıkana kadar düz git”`).
+    - GPT model parses the transcription into JSON like `{"komut": "ileri_git", "kosul": "engel_algilayana_kadar"}`.
     - `motor_surucu.py` receives the JSON and moves the vehicle accordingly.
-    - Voice feedback is generated with OpenAI TTS ("Nova") and played, e.g., `"ileri gidiyorum"`.
+    - Voice feedback is generated with OpenAI TTS (`“Nova”`) and played, e.g., `“ileri gidiyorum”`.
 
 6) Monitor the System
     - All actions and logs are saved in:
@@ -208,7 +208,7 @@ This project demonstrates the integration of speech recognition, natural languag
     - Connect to the same Wi-Fi network as the Raspberry Pi.
     - Enter the Raspberry Pi IP in the app.
     - Press the `“dinlemeye başla”` button.
-    - Say a command like, `"geri dön ve sağa dön"`.
+    - Say a command like, `“geri dön ve sağa dön”`.
     - The app will show command log and status animations.
 
 9) Stopping the System

@@ -147,19 +147,19 @@ This project demonstrates the integration of speech recognition, natural languag
     - Animations and vehicle status are reflected in the Flutter-based mobile app.
 
 ## Usage
-1) Power Up the System
+### 1) Power Up the System
     - Turn on your Raspberry Pi and ensure that the vehicle is powered via the 12V battery for L298N motor driver.
     - Ensure your Bluetooth microphone is powered and connected.
     - Ensure the RFID reader is wired and positioned properly.
 
-2) Authenticate the User (RFID)
+#### 2) Start the Flask Server
+    - Server handles mobile app communication and triggers the listening pipeline.
+    - Once the server is running, the mobile app can send commands to start voice recording. A .txt trigger file (flask_basla.txt) will be created automatically to signal audio capture.
+
+3) Authenticate the User (RFID)
     - Only authorized users can activate the system. Place an authorized RFID card near the reader.
     - If the UID matches a known user, the system writes "araç çalıştı" to arac_durum.txt.
     > Unauthorized cards will be rejected. You can edit allowed UIDs in authorized_uids.txt.
-
-3) Start the Flask Server
-    - Server handles mobile app communication and triggers the listening pipeline.
-    - Once the server is running, the mobile app can send commands to start voice recording. A .txt trigger file (flask_basla.txt) will be created automatically to signal audio capture.
 
 4) Start Continuous Background Listener (Optional)
     - To always keep the vehicle ready for speech recognition upon valid RFID and signal:

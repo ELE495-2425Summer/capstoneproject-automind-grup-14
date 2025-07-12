@@ -158,7 +158,7 @@ This project demonstrates the integration of speech recognition, natural languag
 
 3) Authenticate the User (RFID)
     - Only authorized users can activate the system. Place an authorized RFID card near the reader.
-    - If the UID matches a known user, the system writes '"araç çalıştı"' to "arac_durum.txt".
+    - If the UID matches a known user, the system writes `"araç çalıştı"` to `arac_durum.txt`.
     > Unauthorized cards will be rejected. You can edit allowed UIDs in authorized_uids.txt.
 
 4) Start Continuous Background Listener (Optional)

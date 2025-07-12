@@ -1,0 +1,14 @@
+Belirttiğiniz komutları gerçekleştirmeye başlıyorum.
+
+***
+[{"komut": "ileri_git", "sure": "3", "mesafe": "-"},
+{"komut": "sola_don", "sure": "-", "mesafe": "-"},
+{"komut": "sola_don", "sure": "-", "mesafe": "-"},
+{"komut": "sola_don", "sure": "-", "mesafe": "-"},
+{"komut": "sola_don", "sure": "-", "mesafe": "-"},
+{"komut": "geri_git", "sure": "2", "mesafe": "-"},
+{"komut": "saga_don", "sure": "-", "mesafe": "-"},
+{"komut": "saga_don", "sure": "-", "mesafe": "-"},
+{"komut": "saga_don", "sure": "-", "mesafe": "-"},
+{"komut": "saga_don", "sure": "-", "mesafe": "-"},
+{"komut": "saga_don", "sure": "-", "mesafe": "-"}]

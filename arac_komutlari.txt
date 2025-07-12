@@ -1,0 +1,12 @@
+[
+  {"komut": "ileri_git", "sure": "-", "mesafe": "5"},
+  {"komut": "saga_don", "sure": "-", "mesafe": "-"},
+  {"komut": "saga_don", "sure": "-", "mesafe": "-"},
+  {"komut": "saga_don", "sure": "-", "mesafe": "-"},
+  {"komut": "ileri_git", "sure": "1", "mesafe": "-"},
+  {"komut": "sola_don", "sure": "-", "mesafe": "-"},
+  {"komut": "ileri_git", "sure": "-", "mesafe": "3"},
+  {"komut": "geri_don", "sure": "-", "mesafe": "-"},
+  {"komut": "geri_git", "sure": "-", "mesafe": "-"}
+]
+	

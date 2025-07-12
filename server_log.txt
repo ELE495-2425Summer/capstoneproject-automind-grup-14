@@ -1,0 +1,12 @@
+2025-07-06 10:59:14,434 Ara� kapat�ld� (durum.txt g�ncellendi).
+📡 Kart bekleniyor...
+📥 Kart okundu: UID: C2 46 51 4B 9E
+✅ Yetkili kart! Araç çalıştı. Hoş geldin Omer
+2025-07-06 10:59:24,928 Ara� a�ma i�lemi ba�lat�ld� (uid_kontrol.py).
+2025-07-06 10:59:25,788 Ara� kapat�ld� (durum.txt g�ncellendi).
+📡 Kart bekleniyor...
+2025-07-06 10:59:34,646 Kayıt başlatılamadı: Araç kapalı.
+📥 Kart okundu: UID: C2 46 51 4B 9E
+✅ Yetkili kart! Araç çalıştı. Hoş geldin Omer
+2025-07-06 10:59:37,128 Ara� a�ma i�lemi ba�lat�ld� (uid_kontrol.py).
+2025-07-06 10:59:38,498 Kayıt başlatıldı.

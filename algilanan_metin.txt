@@ -1,0 +1,1 @@
+3 saniye ileri git, 4 kez sola dön, 2 saniye geri git, sonra 5 kez sağa dön.

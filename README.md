@@ -226,9 +226,9 @@ This project was made possible through the collaboration of our dedicated team m
 Contributors
 - [Ömer Faruk İnciler](https://github.com/ofarukinciler)
 - [Alperen Nakiboğlu](https://github.com/alpnak)
-- [Enis Hacışevki](https://github.com/user1)
+- [Enis Hacışevki](https://github.com/Ezohc)
 - [Emre Uluçay](https://github.com/Emreu234)
-- [Bora Saltaş](https://github.com/user1)
+- [Bora Saltaş](https://github.com/borasaltas)
 
 Special thanks to our academic advisor Dr. Ali Murat Demirtaş for his continuous guidance and feedback throughout the project.
 

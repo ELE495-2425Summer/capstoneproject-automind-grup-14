@@ -113,15 +113,15 @@ This project demonstrates the integration of speech recognition, natural languag
 
 4) Folder Structure
     - capstoneproject-automind-grup-14/
-        - mic_test.py                # Microphone test script
-        - speech_to_text.py          # Whisper-based voice transcription
-        - motor_surucu.py            # Motor control logic
-        - openai_tts.py              # Voice feedback generation using TTS
-        - server.py                  # Flask backend server
-        - kayit_al.py                # Live audio recording script
-        - canli_kayit_ve_tanima.py   # Live speaker verification
-        - authorized_uids.txt        # RFID authentication list
-        - requirements.txt           # Dependency list
+        - `mic_test.py`                # Microphone test script
+        - `speech_to_text.py`          # Whisper-based voice transcription
+        - `motor_surucu.py`            # Motor control logic
+        - `openai_tts.py`              # Voice feedback generation using TTS
+        - `server.py`                  # Flask backend server
+        - `kayit_al.py`                # Live audio recording script
+        - `canli_kayit_ve_tanima.py`   # Live speaker verification
+        - `authorized_uids.txt`        # RFID authentication list
+        - `requirements.txt`           # Dependency list
 
 5) Running the Project
     1. Start the Flask server on Raspberry Pi:
@@ -133,17 +133,17 @@ This project demonstrates the integration of speech recognition, natural languag
         python3 canli_kayit_ve_tanima.py
         ```
     - On the mobile app, send commands or start recording.
-        > canli_kayit_ve_tanima.py will only activate if a valid RFID card was scanned and written to arac_durum.txt.
+        > canli_kayit_ve_tanima.py will only activate if a valid RFID card was scanned and written to `arac_durum.txt`.
 
 6) First-Time Setup Notes
     - Pair the Bluetooth microphone using GUI or bluetoothctl.
-    - The Raspberry Pi must be connected to the RFID module via UART. kayit_al.py will detect and log authorized UID cards.
+    - The Raspberry Pi must be connected to the RFID module via UART. `kayit_al.py` will detect and log authorized UID cards.
     - Ensure OpenAI API key is defined in your Python scripts or environment, openai.api_key = "sk-...".
 
 7) Additional Notes
     - All voice interactions are in Turkish.
     - Whisper API is used online.
-    - Output logs are written to server_log.txt.
+    - Output logs are written to `server_log.txt`.
     - Animations and vehicle status are reflected in the Flutter-based mobile app.
 
 ## Usage
@@ -154,32 +154,32 @@ This project demonstrates the integration of speech recognition, natural languag
 
 2) Start the Flask Server
     - Server handles mobile app communication and triggers the listening pipeline.
-    - Once the server is running, the mobile app can send commands to start voice recording. flask_basla.txt trigger file will be created automatically to signal audio capture.
+    - Once the server is running, the mobile app can send commands to start voice recording. `flask_basla.txt` trigger file will be created automatically to signal audio capture.
 
 3) Authenticate the User (RFID)
     - Only authorized users can activate the system. Place an authorized RFID card near the reader.
     - If the UID matches a known user, the system writes `"araç çalıştı"` to `arac_durum.txt`.
-    > Unauthorized cards will be rejected. You can edit allowed UIDs in authorized_uids.txt.
+    > Unauthorized cards will be rejected. You can edit allowed UIDs in `authorized_uids.txt`.
 
 4) Start Continuous Background Listener (Optional)
     - To always keep the vehicle ready for speech recognition upon valid RFID and signal:
     ```bash
     python3 canli_kayit_ve_tanima.py
     ```
-    - This script monitors flask_basla.txt.
+    - This script monitors `flask_basla.txt`.
     - When the file says "basla", it begins recording and sends audio to Whisper for transcription and to Speaker ID system for user check.
 
 5) Voice Command Workflow (Automatic)
     - After background listener is triggered, audio is recorded with sounddevice. The file is saved locally, converted to .wav, and checked with speechbrain or Resemblyzer for user identity.
     - If voice is verified, whisper transcribes the command (e.g., "engel çıkana kadar düz git").
     - GPT model parses the transcription into JSON like {"komut": "ileri_git", "kosul": "engel_algilayana_kadar"}
-    - motor_surucu.py receives the JSON and moves the vehicle accordingly.
+    - `motor_surucu.py` receives the JSON and moves the vehicle accordingly.
     - Voice feedback is generated with OpenAI TTS ("Nova") and played, e.g., "İleri gidiyorum."
 
 6) Monitor the System
     - All actions and logs are saved in:
-        - server_log.txt – full log
-        - transkript.txt – recognized voice command
+        - `server_log.txt` – full log
+        - `transkript.txt` – recognized voice command
         - durum.txt – current vehicle state
     - Logs can be tailed,
         ```bash
@@ -212,7 +212,7 @@ This project demonstrates the integration of speech recognition, natural languag
     - The app will show command log and status animations.
 
 9) Stopping the System
-    - Press CTRL+C in the terminal where canli_kayit_ve_tanima.py is running. Or delete the flask_basla.txt file manually.
+    - Press CTRL+C in the terminal where `canli_kayit_ve_tanima.py` is running. Or delete the `flask_basla.txt` file manually.
 
 - Notes
     - Ensure your OpenAI API key is correctly set in openai.api_key field.

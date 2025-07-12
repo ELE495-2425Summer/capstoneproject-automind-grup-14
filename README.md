@@ -223,5 +223,44 @@ Include screenshots of the project in action to give a visual representation of 
 ## Acknowledgements
 Give credit to those who have contributed to the project or provided inspiration. Include links to any resources or tools used in the project.
 
-[Contributor 1](https://github.com/user1)
+
+
+This project was made possible through the collaboration of our dedicated team members and the use of several open-source tools and platforms. We would like to express our sincere gratitude to everyone who supported and contributed to the development process.
+
+Contributors
+- [Ömer Faruk İnciler](https://github.com/ofarukinciler)
+- [Alperen Nakiboğlu](https://github.com/alpnak)
+- [Enis Hacışevki](https://github.com/user1)
+- [Emre Uluçay](https://github.com/Emreu234)
+- [Bora Saltaş](https://github.com/user1)
+
+Special thanks to our academic advisor Dr. Ali Murat Demirtaş for his continuous guidance and feedback throughout the project.
+
+Tools and Resources
 [Resource or Tool](https://www.nvidia.com)
+
+We gratefully acknowledge the use of the following technologies, libraries, and platforms:
+
+Raspberry Pi Foundation – for the development platform and GPIO ecosystem
+
+OpenAI Whisper & GPT APIs – for transcription and natural language understanding
+
+Google TTS – for generating voice responses
+
+SpeechBrain – for speaker verification
+
+Resemblyzer – for alternative lightweight voice authentication
+
+Flask – for REST API and mobile backend
+
+Flutter – for building the mobile interface
+
+gpiozero – for controlling Raspberry Pi hardware easily
+
+sounddevice – for live audio capture
+
+L298N Motor Driver Docs – motor control reference
+
+MPU6050 Datasheet – for gyro handling
+
+We would also like to thank the open-source community, whose documentation, libraries, and examples were crucial to the success of this project.

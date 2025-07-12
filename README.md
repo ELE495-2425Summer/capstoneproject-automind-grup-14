@@ -66,6 +66,10 @@ This project demonstrates the integration of speech recognition, natural languag
     - Voice Feedback: Generates real-time spoken feedback using OpenAI TTS (`"Nova"` voice).
     - Speaker Verification: Ensures only known users can give commands using embedding-based audio comparison.
 
+Project Flow Chart
+
+![Flow Chart](akis_semasi.jpg)
+
 ## Installation
 1) Prerequisites
     - Raspberry Pi 5 (with internet access)

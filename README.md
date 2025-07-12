@@ -203,7 +203,7 @@ This project demonstrates the integration of speech recognition, natural languag
         ```bash
         python3 speech_to_text.py
         ```
-        
+
 8) Mobile App Usage
     - Connect to the same Wi-Fi network as the Raspberry Pi.
     - Enter the Raspberry Pi IP in the app.
@@ -223,6 +223,8 @@ This project demonstrates the integration of speech recognition, natural languag
 Mobile Application Interface
 
 ![Mobile Application Interface](Mobile_Application_Interface.png)
+
+
 
 Project Demo Video
 

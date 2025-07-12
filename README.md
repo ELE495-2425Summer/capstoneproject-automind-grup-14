@@ -18,8 +18,7 @@ The vehicle also includes an RFID-based authentication system to ensure only aut
 This project demonstrates the integration of speech recognition, natural language processing, embedded control systems, and mobile app development to create a fully autonomous and voice-interactive robotic platform.
 
 ## Features
-### Key Functionalities
-
+1) Key Functionalities
     - Voice-Controlled Autonomy: The vehicle receives and processes Turkish voice commands to perform autonomous navigation tasks without manual input.
     - User Authentication via RFID: Only authorized users can operate the vehicle through RFID card validation.
     - Real-Time Mobile App Interface: Users can monitor vehicle status, command execution, and log messages via a Flutter-based mobile app.
@@ -27,8 +26,7 @@ This project demonstrates the integration of speech recognition, natural languag
     - Obstacle Detection and Avoidance: Ultrasonic sensor ensures safe navigation by detecting and reacting to nearby obstacles.
     - Direction-Aware Turning: Integrated gyroscope (MPU-6050) enables accurate rotational control during turns.
 
-### Hardware Components
-
+2) Hardware Components
     - Raspberry Pi 5 – The main processing unit.
     - Bluetooth Microphone – For wireless audio input.
     - MPU-6050 Gyroscope – For detecting angular movement and orientation.
@@ -39,8 +37,8 @@ This project demonstrates the integration of speech recognition, natural languag
     - Power Supply (3.7V x 3 serial 18650 Li-Ion battery) – Powers L298N motor driver.
     - Power Bank – Powers Raspberry Pi 5.
     - microSD Card – For OS and software storage.
-
-### Operating System & Packages
+    
+3) Operating System & Packages
     - OS: Raspberry Pi OS (Bookworm)
     - Programming Language: Python 3.11
     - Key Python Libraries:
@@ -51,13 +49,13 @@ This project demonstrates the integration of speech recognition, natural languag
         - flask, requests – For API and mobile interface
         - pyserial – For UART communication with RFID module
 
-### Applications
+4) Applications
     - Voice-Based Vehicle Control: Enables hands-free vehicle operation using natural spoken commands.
     - Access Restriction via RFID: Prevents unauthorized use by requiring RFID authentication.
     - Mobile Monitoring App: Shows real-time system state, sensor logs, and command execution feedback.
     - Autonomous Driving Logic: Uses LLM output to control movement based on conditions (e.g., “move forward until obstacle”).
 
-### Services
+5) Services
     - Speech Recognition Service: Converts live recorded audio to text using OpenAI Whisper.
     - Command Parsing Engine: Converts text commands into structured JSON control instructions using GPT-4.
     - Real-Time Flask API: Handles mobile app communication for sending/receiving commands and monitoring status.

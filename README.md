@@ -34,7 +34,7 @@ This project demonstrates the integration of speech recognition, natural languag
     - L298N Motor Driver – Controls the vehicle's DC motors.
     - RC522 RFID Reader + Tags – Used for verifying authorized users.
     - DC Geared Motors – Enable forward/backward movement and turning.
-    - Power Supply (3.7V x 3 serial 18650 Li-Ion 12V Battery) – Powers L298N motor driver.
+    - Power Supply (3.7V x 3 serial 18650 Li-Ion battery) – Powers L298N motor driver.
     - Power Bank – Powers Raspberry Pi 5.
     - microSD Card – For OS and software storage.
 
@@ -224,33 +224,23 @@ Include screenshots of the project in action to give a visual representation of 
 ## Acknowledgements
 This project was made possible through the collaboration of our dedicated team members and the use of several open-source tools and platforms. We would like to express our sincere gratitude to everyone who supported and contributed to the development process.
 
-Contributors
-- [Ömer Faruk İnciler](https://github.com/ofarukinciler)
-- [Alperen Nakiboğlu](https://github.com/alpnak)
-- [Enis Hacışevki](https://github.com/Ezohc)
-- [Emre Uluçay](https://github.com/Emreu234)
-- [Bora Saltaş](https://github.com/borasaltas)
+- Contributors
+    - [Ömer Faruk İnciler](https://github.com/ofarukinciler)
+    - [Alperen Nakiboğlu](https://github.com/alpnak)
+    - [Enis Hacışevki](https://github.com/Ezohc)
+    - [Emre Uluçay](https://github.com/Emreu234)
+    - [Bora Saltaş](https://github.com/borasaltas)
 
 Special thanks to our academic advisor Dr. Ali Murat Demirtaş for his continuous guidance and feedback throughout the project.
 
-Tools and Resources
+- Tools and Resources
+    - [Raspberry Pi Foundation](https://www.raspberrypi.org/) – for the development platform and GPIO ecosystem
+    - [OpenAI Whisper & GPT APIs](https://platform.openai.com/) – for transcription and natural language understanding
+    - [gpiozero](https://gpiozero.readthedocs.io/en/stable/) – for controlling Raspberry Pi hardware easily
+    - [sounddevice](https://python-sounddevice.readthedocs.io/en/0.5.1/) – for live audio capture
+    - [Speach Brain](https://speechbrain.readthedocs.io/en/latest/) – for speaker verification
+    - [Resemblyzer](https://github.com/resemble-ai/Resemblyzer) – for alternative lightweight voice authentication
+    - [Flask](https://flask.palletsprojects.com/en/stable/) – for REST API and mobile backend
+    - [Flutter](https://flutter.dev/) – for building the mobile interface
 
-We gratefully acknowledge the use of the following technologies, libraries, and platforms:
-
-[Raspberry Pi Foundation](https://www.raspberrypi.org/) – for the development platform and GPIO ecosystem
-
-[OpenAI Whisper & GPT APIs](https://platform.openai.com/) – for transcription and natural language understanding
-
-[gpiozero](https://gpiozero.readthedocs.io/en/stable/) – for controlling Raspberry Pi hardware easily
-
-[sounddevice](https://python-sounddevice.readthedocs.io/en/0.5.1/) – for live audio capture
-
-[Speach Brain](https://speechbrain.readthedocs.io/en/latest/) – for speaker verification
-
-[Resemblyzer](https://github.com/resemble-ai/Resemblyzer) – for alternative lightweight voice authentication
-
-[Flask](https://flask.palletsprojects.com/en/stable/) – for REST API and mobile backend
-
-[Flutter](https://flutter.dev/) – for building the mobile interface
-
-We would also like to thank the open-source community, whose documentation, libraries, and examples were crucial to the success of this project.
+We gratefully acknowledge the use of the above technologies, libraries, and platforms. We would also like to thank the open-source community, whose documentation, libraries, and examples were crucial to the success of this project.

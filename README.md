@@ -24,7 +24,7 @@ This project demonstrates the integration of speech recognition, natural languag
     - User Authentication via RFID: Only authorized users can operate the vehicle through RFID card validation.
     - Real-Time Mobile App Interface: Users can monitor vehicle status, command execution, and log messages via a Flutter-based mobile app.
     - Command Understanding via LLM: Natural language commands are interpreted and converted into actionable JSON structures by a language model.
-    - Obstacle Detection and Avoidance: Ultrasonic sensor ensures safe navigation by detecting and reacting to nearby obstacles.
+    - Obstacle Detection and Avoidance: Ultrasonic sensors ensure safe navigation by detecting and reacting to nearby obstacles.
     - Direction-Aware Turning: Integrated gyroscope (MPU-6050) enables accurate rotational control during turns.
 
 2) Hardware Components
@@ -38,6 +38,9 @@ This project demonstrates the integration of speech recognition, natural languag
     - Power Supply (3.7V x 3 serial 18650 Li-Ion battery) – Powers L298N motor driver.
     - Power Bank – Powers Raspberry Pi 5.
     - microSD Card – For OS and software storage.
+    - Arduino Nano - RFID processing unit
+    - Robot Car Kit - Car Chasis
+    - Jumper Cables - Used for connecting components. 
 
 3) Operating System & Packages
     - OS: Raspberry Pi OS (Bookworm)
@@ -114,7 +117,6 @@ This project demonstrates the integration of speech recognition, natural languag
 
 4) Folder Structure
     - capstoneproject-automind-grup-14/
-        - `mic_test.py`                # Microphone test script
         - `speech_to_text.py`          # Whisper-based voice transcription
         - `motor_surucu.py`            # Motor control logic
         - `openai_tts.py`              # Voice feedback generation using TTS

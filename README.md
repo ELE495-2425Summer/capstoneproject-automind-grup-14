@@ -220,6 +220,7 @@ When the file says "basla", it begins recording and sends audio to Whisper for t
 
 ## Screenshots
 - Mobile Application Interface
+
 ![Mobile Application Interface](Mobile_Application_Interface.png)
 
 ## Acknowledgements

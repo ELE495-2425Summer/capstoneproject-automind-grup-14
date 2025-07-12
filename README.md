@@ -254,3 +254,7 @@ Special thanks to our academic advisor Dr. Ali Murat Demirtaş for his continuou
     - [Flutter](https://flutter.dev/) – for building the mobile interface
 
 We gratefully acknowledge the use of the above technologies, libraries, and platforms. We would also like to thank the open-source community, whose documentation, libraries, and examples were crucial to the success of this project.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).

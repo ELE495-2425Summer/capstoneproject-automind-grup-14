@@ -172,7 +172,7 @@ This project demonstrates the integration of speech recognition, natural languag
 5) Voice Command Workflow (Automatic)
     - After background listener is triggered, audio is recorded with sounddevice. The file is saved locally, converted to .wav, and checked with speechbrain or Resemblyzer for user identity.
     - If voice is verified, whisper transcribes the command (e.g., `“engel çıkana kadar düz git”`).
-    - GPT model parses the transcription into JSON like `{"komut": "ileri_git", "kosul": "engel_algilayana_kadar"}`.
+    - GPT model parses the transcription into JSON like `{"komut": "ileri_git", "kosul": "engel_algilayana_kadar", "sure": "-", "mesafe": "-"}`.
     - `motor_surucu.py` receives the JSON and moves the vehicle accordingly.
     - Voice feedback is generated with OpenAI TTS (`“Nova”`) and played, e.g., `“ileri gidiyorum”`.
 
